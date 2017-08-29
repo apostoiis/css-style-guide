@@ -39,6 +39,7 @@ This guide contains a mashup of ideas from the [Github CSS styleguide](https://g
 ### Formating
 
 * Use a semicolon `;` after every declaration. Even the last one.
+* Use dashes in class names. Don't use camelCase or underscores.
 * Properties within rule sets should each reside on their own line.
 * Use hex color codes `#000` instead of using rgb.
 * Ideally try to use color variables from skroutz color palette instead of hex or rgb.
@@ -58,22 +59,16 @@ This guide contains a mashup of ideas from the [Github CSS styleguide](https://g
 * Parentheses should not be padded with spaces, also try not to add a space after mixin name (Bad example: `@include animation ( blur 1s linear )`, Good example: `@include animation(blur 1s linear)`).
 
 
-Here is a good example syntax:
+#### Good
 
-```SCSS
-/* This is a good CSS example! */
-
+```
 .foo {
   border: 1px solid #0f0;
   color: #000;
   background: rgba(0, 0, 0, .5);
 }
-```
 
-```SCSS
-// This is a good SCSS example!
-
-.foo {
+.bar {
   @include center(vertical);
   color: $orange;
   font-size: 13px;
@@ -83,6 +78,19 @@ Here is a good example syntax:
   }
 }
 ```
+
+#### Bad
+```
+.foo_bar {
+  color: $orange;
+  font-size: 13px;
+  &:hover {
+    color: $red;
+  }
+}
+```
+
+
 
 ### Comments
 
